@@ -6,7 +6,7 @@
 
   <title>Frontend Mentor | Grid landing page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="shortcut icon" href="First-project/assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
       background-color: #2563eb;
       min-width: 375px;
       overflow-y: hidden;
+      overflow-x: hidden;
     }
     *{
       font-family: 'Inter', sans-serif;
@@ -39,7 +40,7 @@
       color: #fff;
     }
     nav{
-      margin-top: 0.5%;
+      margin-top: 0.8%;
       margin-bottom: 1%;
       display: flex;
       color: #fff;
@@ -91,17 +92,16 @@
       box-sizing: border-box;
     }
     #item4, #item5, #item6, #item7 {
-      padding: 3.1rem 4rem 3.1rem 4rem;
+      /*padding: 3.1rem 4rem 3.1rem 4rem;*/
       color: #fff;
-      height: 25vh;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
     #metric-container{
+      position: relative;
       align-items: right;
       justify-content: end;
       height: 100%;
@@ -133,6 +133,12 @@
     #metric-container div:nth-child(even) {
       border-right: none;
     }
+    #menu-image{
+    }
+    #menu-image:hover{
+      width: 1.7em;
+      height: 1.7em;
+    }
 
   </style>
 </head>
@@ -144,7 +150,10 @@
     <a href="#">
       <div id="nav-shi"><i>●</i>Bridge Collective</div>
     </a>
-    <div id="menu-icon"><img src="assets/images/icon-menu.svg" alt="Menu"></div>
+    <div id="menu-icon">
+      <img src="assets/images/icon-menu.svg" alt="Menu" id="menu-image">
+      <aside></aside>
+    </div>
   </nav>
   </header>
   <div id="container">
@@ -153,10 +162,46 @@
   </div>
   <div id="item2">
     <div id="metric-container">
-    <div id="item4">hey</div>
-    <div id="item5">YO</div>
-    <div id="item6">WHATSUP</div>
-    <div id="item7">NOTHING</div>
+    <div id="item4" style="width: 100%; display: flex; flex-direction: column;">
+      <div id="item4-box1" style="display: flex; flex-direction: row; gap: 45%;">
+      <img src="assets/images/icon-sparkle.svg" alt="" width="20px" height="20px" style="margin-top: 2rem; margin-left: 2rem;">
+      <span style="font-size: 2em; font-weight: 400; padding-top: 1.6rem;">2.4M</span>
+      </div>
+      <div id="item4-box2" style="display: flex; flex-direction: column; justify-content: left; text-align: left; margin-top: auto;">
+        <span style="font-weight: 400; padding-bottom: 0.5rem; padding-left: 2rem;">Stdents reached</span>
+        <span style="font-size: small; padding-bottom: 0.8rem; padding-left: 2rem; color: rgba(255, 255, 255, 0.2);">Across 31 countries since 2011.</span>
+      </div>
+    </div>
+    <div id="item5" style="width: 100%; display: flex; flex-direction: column;">
+      <div id="item5-box1" style="display: flex; flex-direction: row; gap: 45%;">
+        <img src="assets/images/icon-plus.svg" alt="" width="20px" height="20px" style="margin-top: 2rem; margin-left: 2rem;">
+        <span style="font-size: 2em; font-weight: 400; padding-top: 1.6rem;">1,284</span>
+      </div>
+      <div id="item5-box2" style="display: flex; flex-direction: column; justify-content: left; text-align: left; margin-top: auto;"> 
+        <span style="font-weight: 400; padding-bottom: 0.5rem; padding-left: 2rem;">Schools partnered</span>
+        <span style="font-size: small; padding-bottom: 0.8rem; padding-left: 2rem; color: rgba(255, 255, 255, 0.2);">In 14 countries from Kenya to Guatmala.</span>
+      </div>
+    </div>
+    <div id="item6" style="width: 100%; display: flex; flex-direction: column;">
+      <div id="item6-box1"  style="display: flex; flex-direction: row; gap: 45%;">
+      <img src="assets/images/icon-arrow-right.svg" alt="" width="20px" height="20px" style="margin-top: 2rem; margin-left: 2rem;">
+      <span style="font-size: 2em; font-weight: 400; padding-top: 1.6rem;">38K</span>
+      </div>
+      <div id="item6-box2"  style="display: flex; flex-direction: column; justify-content: left; text-align: left; margin-top: auto;">
+        <span style="font-weight: 400; padding-bottom: 0.5rem; padding-left: 2rem;">Teachers trained</span>
+        <span style="font-size: small; padding-bottom: 0.8rem; padding-left: 2rem; color: rgba(255, 255, 255, 0.2);">Equipped with modern tools and methodology.</span>
+      </div>
+    </div>
+    <div id="item7" style="width: 100%; display: flex; flex-direction: column;">
+      <div id="item7-box1"  style="display: flex; flex-direction: row; gap: 45%;">
+      <img src="assets/images/icon-trending-up.svg" alt="" width="20px" height="20px" style="margin-top: 2rem; margin-left: 2rem;">
+      <span style="font-size: 2em; font-weight: 400; padding-top: 1.6rem;">3.1<i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <div id="item7-box2"  style="display: flex; flex-direction: column; justify-content: left; text-align: left; margin-top: auto;">
+        <span style="font-weight: 400; padding-bottom: 0.5rem; padding-left: 2rem;">Graduation lift</span>
+        <span style="font-size: small; padding-bottom: 0.8rem; padding-left: 2rem; color: rgba(255, 255, 255, 0.2);">Partner school outperform national averages 3×.</span>
+      </div>
+    </div>
   </div>
   </div>
   </div>
