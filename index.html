@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Grid landing page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+      background-color: #2563eb;
+      max-width: 1440px;
+      min-width: 375px;
+      overflow-y: hidden;
+    }
+    *{
+      font-family: 'Inter', sans-serif;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    #navshi {
+      font-size: 0.5rem;
+      list-style-type:disc;
+      color: #fff;
+      margin-left: 20%;
+    }
+    a {
+      margin-left: 2%;
+      margin-top: 0.7%;
+      margin-bottom: 0.7%;
+      text-decoration: none;
+      color: #fff;
+    }
+    nav{
+      margin-top: 0.5%;
+      margin-bottom: 1%;
+      display: flex;
+      color: #fff;
+    }
+    #menu-icon {
+      margin-top: 0.3%;
+      margin-left: 85%;
+    }
+    #container {
+      width: clamp(375px, 100%, 1440px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-left: none;
+      border-right: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "item1 item2";
+      @media (min-width:768) {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    #item1 {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      height: 84vh;
+      width: clamp(375px, 50%, 50%);
+      align-items: center;
+      justify-content: center;
+      grid-area: item1;
+      border: none;
+      border-right: none;
+      border-left: none;
+      text-align-last:left;
+    }
+    #another {
+      margin-bottom: 4%;
+      font-size: 3.2rem;
+      text-align-last: left;
+      display: flex;
+    }
+    #item2{
+      align-items: right;
+      justify-content: end;
+      width: 50%;
+      height: 84vh;
+      box-sizing: border-box;
+    }
+    #item4, #item5, #item6, #item7 {
+      padding: 3.1rem 4rem 3.1rem 4rem;
+      color: #fff;
+      height: 25vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    #metric-container{
+      align-items: right;
+      justify-content: end;
+      height: 100%;
+      width: 100%;
+      grid-area: item2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "item4 item5"
+        "item6 item7";
+    }
+    #metric-container div:nth-child(1) {
+      border-right: none;
+      border-bottom: none;
+      border-top: none;
+    }
+    #metric-container div:nth-child(3) {
+      border-right: none;
+      border-bottom: none;
+    }
+    #metric-container div:nth-child(2) {
+      border-top: none;
+    }
+    #metric-container div:nth-child(4) {
+      border-top: none;
+      border-bottom: none;
+    }
+    #metric-container div:nth-child(even) {
+      border-right: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+   <header>
+  <nav>
+    <a href="#">
+      <div id="nav-shi"><i>●</i>Bridge Collective</div>
+    </a>
+    <div id="menu-icon"><img src="assets/images/icon-menu.svg" alt="Menu"></div>
+  </nav>
+  </header>
+  <div id="container">
+  <div id="item1"><div id="another">A classroom <br>for every child.</div>
+      We fund the schools, train the teachers, and <br>measure what works — so every child we reach <br>today becomes a graduate tomorrow.
+  </div>
+  <div id="item2">
+    <div id="metric-container">
+    <div id="item4">hey</div>
+    <div id="item5">YO</div>
+    <div id="item6">WHATSUP</div>
+    <div id="item7">NOTHING</div>
+  </div>
+  </div>
+  </div>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Elijah Lucky</a>.
+  </div> -->
+</body>
+</html>
