@@ -4,23 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Grid landing page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+  <link rel="shortcut icon" href="First-project/assets/images/favicon-32x32.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body{
       height: 100vh;
       margin: 0;
       color: #fff;
       background-color: #2563eb;
-      max-width: 1440px;
       min-width: 375px;
       overflow-y: hidden;
     }
@@ -53,12 +49,14 @@
       margin-left: 85%;
     }
     #container {
-      width: clamp(375px, 100%, 1440px);
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      width: 100%;
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-left: none;
       border-right: none;
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       grid-template-rows: 1fr;
       grid-template-areas:
         "item1 item2";
@@ -72,7 +70,6 @@
       flex-direction: column;
       text-align: center;
       height: 84vh;
-      width: clamp(375px, 50%, 50%);
       align-items: center;
       justify-content: center;
       grid-area: item1;
@@ -90,7 +87,6 @@
     #item2{
       align-items: right;
       justify-content: end;
-      width: 50%;
       height: 84vh;
       box-sizing: border-box;
     }
@@ -164,11 +160,5 @@
   </div>
   </div>
   </div>
-
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Elijah Lucky</a>.
-  </div> -->
 </body>
 </html>
